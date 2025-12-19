@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,8 +24,8 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${isScrolled
-          ? 'bg-background-dark/90 backdrop-blur-md border-white/5 py-4'
-          : 'bg-transparent border-transparent py-6'
+        ? 'bg-background-dark/90 backdrop-blur-md border-white/5 py-4'
+        : 'bg-transparent border-transparent py-6'
         }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
@@ -70,27 +71,33 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-surface-dark border-t border-white/5 transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        className={`md:hidden fixed inset-0 z-40 bg-background-dark/98 backdrop-blur-xl transition-all duration-500 ease-in-out ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
           }`}
       >
-        <div className="flex flex-col items-center py-8 space-y-6">
-          {navLinks.map((link) => (
-            <a
+        <div className="flex flex-col items-center justify-center h-full space-y-8 px-6 text-center">
+          {navLinks.map((link, index) => (
+            <motion.a
               key={link.name}
               href={link.href}
-              className="text-white hover:text-primary transition-colors font-display text-lg"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isMenuOpen ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: index * 0.1 }}
+              className="text-white hover:text-primary transition-colors font-display text-4xl font-bold uppercase tracking-widest"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.name}
-            </a>
+            </motion.a>
           ))}
-          <a
+          <motion.a
             href="https://wa.me/5531985036147"
-            className="text-primary font-bold mt-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isMenuOpen ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: navLinks.length * 0.1 }}
+            className="bg-primary text-black px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm shadow-[0_0_20px_rgba(176,141,85,0.4)]"
             onClick={() => setIsMenuOpen(false)}
           >
             AGENDAR CONSULTA
-          </a>
+          </motion.a>
         </div>
       </div>
     </nav>

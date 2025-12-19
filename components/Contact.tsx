@@ -5,41 +5,41 @@ const Contact: React.FC = () => {
     return (
         <section id="contato" className="bg-background-dark pt-12 pb-24 relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
-                <div className="bg-surface-lighter rounded-3xl shadow-2xl p-8 md:p-12 -mt-24 border-t-4 border-primary grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-20">
+                <div className="bg-surface-lighter rounded-3xl shadow-2xl p-6 md:p-12 mt-0 md:-mt-24 border-t-4 border-primary grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 relative z-20">
 
                     {/* Info Side */}
                     <div>
-                        <h2 className="font-display text-3xl font-bold text-white mb-8">Onde Estamos?</h2>
-                        <div className="space-y-8">
+                        <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-8">Onde Estamos?</h2>
+                        <div className="space-y-6 md:space-y-8">
                             <div className="flex items-start gap-4 group">
-                                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
-                                    <MapPin size={24} />
+                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                                    <MapPin size={20} className="md:w-6 md:h-6" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-white text-lg">UNIDADE</h4>
-                                    <p className="text-gray-400 mt-1 leading-relaxed text-sm">
+                                    <h4 className="font-bold text-white text-base md:text-lg uppercase">UNIDADE</h4>
+                                    <p className="text-gray-400 mt-1 leading-relaxed text-xs md:text-sm">
                                         Av. Sebastião de Brito, 100, Sala 606 - Dona Clara, Belo Horizonte, Brazil
                                     </p>
                                 </div>
                             </div>
 
                             <div className="flex items-start gap-4 group">
-                                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
-                                    <Phone size={24} />
+                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                                    <Phone size={20} className="md:w-6 md:h-6" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-white text-lg">Atendimento das 08H às 18:00</h4>
-                                    <p className="text-primary font-bold mt-1 text-lg">(31) 98503-6147</p>
+                                    <h4 className="font-bold text-white text-base md:text-lg uppercase">Atendimento das 08H às 18:00</h4>
+                                    <p className="text-primary font-bold mt-1 text-base md:text-lg">(31) 98503-6147</p>
                                 </div>
                             </div>
 
                             <div className="flex items-start gap-4 group">
-                                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
-                                    <Mail size={24} />
+                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                                    <Mail size={20} className="md:w-6 md:h-6" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-white text-lg">Email</h4>
-                                    <p className="text-gray-400 text-sm">contato@crisfagundes.com.br</p>
+                                    <h4 className="font-bold text-white text-base md:text-lg uppercase">Email</h4>
+                                    <p className="text-gray-400 text-xs md:text-sm">contato@crisfagundes.com.br</p>
                                 </div>
                             </div>
                         </div>

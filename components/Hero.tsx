@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-display text-4xl md:text-6xl text-white font-bold leading-tight mb-6"
+            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight mb-6"
           >
             Recupere a saúde do seu cabelo e a{' '}
             <span className="text-primary italic relative inline-block">
@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl text-gray-300 mb-10 font-light max-w-lg leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-gray-300 mb-10 font-light max-w-lg leading-relaxed"
           >
             Terapia capilar avançada e personalizada. Protocolos exclusivos com
             equipamentos de alta tecnologia e profissionais capacitados.
@@ -79,16 +79,16 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Floating features footer for Hero */}
-      <div className="absolute bottom-0 left-0 w-full z-20 hidden lg:block border-t border-white/5 bg-background-dark/50 backdrop-blur-sm">
-        <div className="container mx-auto px-6 py-6 grid grid-cols-4 gap-8">
+      <div className="absolute bottom-0 left-0 w-full z-20 border-t border-white/5 bg-background-dark/80 backdrop-blur-md">
+        <div className="container mx-auto px-6 py-4 md:py-6 flex lg:grid lg:grid-cols-4 gap-6 md:gap-8 overflow-x-auto lg:overflow-x-visible no-scrollbar scroll-smooth snap-x">
           {features.map((item, index) => (
-            <div key={index} className="flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary">
+            <div key={index} className="flex items-start gap-3 md:gap-4 hover:-translate-y-1 transition-transform duration-300 shrink-0 lg:shrink w-[240px] md:w-[280px] lg:w-auto snap-center">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary">
                 {item.icon}
               </div>
               <div>
-                <h3 className="font-display font-bold text-sm text-white">{item.title}</h3>
-                <p className="text-xs text-gray-400 mt-1 leading-tight">{item.desc}</p>
+                <h3 className="font-display font-bold text-xs md:text-sm text-white">{item.title}</h3>
+                <p className="text-[10px] md:text-xs text-gray-400 mt-0.5 md:mt-1 leading-tight">{item.desc}</p>
               </div>
             </div>
           ))}

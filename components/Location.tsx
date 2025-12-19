@@ -12,7 +12,7 @@ const Location: React.FC = () => {
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
 
-      <div className="absolute inset-0 flex items-end justify-center pointer-events-none pb-8 md:pb-12">
+      <div className="absolute inset-0 hidden md:flex items-end justify-center pointer-events-none pb-8 md:pb-12">
         <a
           href="https://maps.google.com/?q=Av.+Sebastião+de+Brito,+100,+Sala+606+-+Dona+Clara,+Belo+Horizonte,+Brazil"
           target="_blank"

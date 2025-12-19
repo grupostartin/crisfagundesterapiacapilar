@@ -74,7 +74,7 @@ const Results: React.FC = () => {
               className="group relative overflow-hidden rounded-2xl bg-surface-lighter shadow-xl border border-white/5"
             >
               {/* Split Image Container */}
-              <div className="relative h-80 w-full overflow-hidden flex">
+              <div className="relative h-64 sm:h-72 md:h-80 w-full overflow-hidden flex">
                 <div className="w-1/2 relative h-full border-r border-white/10 overflow-hidden">
                   <img src={item.imgBefore} alt="Antes" className="absolute inset-0 h-full w-full object-cover object-left group-hover:scale-110 transition-transform duration-700" />
                   <span className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Antes</span>
@@ -85,7 +85,7 @@ const Results: React.FC = () => {
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-5 md:p-6">
                 <h3 className="text-lg font-display font-bold text-white mb-2">{item.title}</h3>
                 <p className="text-sm text-gray-400 mb-4 line-clamp-2">{item.desc}</p>
                 <a href="#" className="flex items-center gap-2 text-primary text-xs font-bold uppercase tracking-widest group-hover:gap-3 transition-all">
@@ -97,7 +97,7 @@ const Results: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="py-12 border-y border-white/5 grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-24">
+        <div className="py-12 border-y border-white/5 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center mb-16 md:mb-24">
           {[
             { val: "+1500", label: "Pacientes Atendidos" },
             { val: "98%", label: "Satisfação" },
@@ -105,8 +105,8 @@ const Results: React.FC = () => {
             { val: "+15", label: "Protocolos Exclusivos" }
           ].map((stat, i) => (
             <div key={i}>
-              <span className="block text-4xl md:text-5xl font-display font-bold text-primary mb-2">{stat.val}</span>
-              <span className="text-xs text-gray-500 uppercase tracking-widest">{stat.label}</span>
+              <span className="block text-3xl md:text-5xl font-display font-bold text-primary mb-2">{stat.val}</span>
+              <span className="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest">{stat.label}</span>
             </div>
           ))}
         </div>
@@ -116,7 +116,7 @@ const Results: React.FC = () => {
           <div className="text-center mb-12">
             <h3 className="text-2xl font-display font-bold text-white">Depoimentos</h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {testimonials.map((t, i) => (
               <motion.div
                 key={i}
@@ -124,7 +124,7 @@ const Results: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.2 }}
-                className="bg-surface-lighter p-8 rounded-2xl border border-white/5 relative"
+                className="bg-surface-lighter p-6 md:p-8 rounded-2xl border border-white/5 relative"
               >
                 <div className="absolute -top-4 left-8 bg-primary text-black p-2 rounded-full shadow-lg">
                   <Quote size={20} fill="currentColor" />
