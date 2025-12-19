@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cris Fagundes - Terapia Capilar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Spline+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: "#B08D55",
+            "primary-dark": "#8E7044",
+            "background-dark": "#12100E",
+            "surface-dark": "#1A1816",
+            "surface-lighter": "#262626",
+            "text-light": "#E5E5E5",
+            "text-muted": "#9CA3AF"
+          },
+          fontFamily: {
+            display: ['"Spline Sans"', 'sans-serif'],
+            body: ['"Lato"', 'sans-serif'],
+          },
+          backgroundImage: {
+            'gradient-gold': 'linear-gradient(135deg, #D4AF7A 0%, #F3E5D0 100%)',
+            'pattern': 'radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px)'
+          },
+          backgroundSize: {
+            'pattern': '30px 30px'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom scrollbar for better aesthetics */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #12100E;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #B08D55;
+    }
+  </style>
+</head>
+
+<body class="bg-background-dark text-text-light font-body antialiased">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
